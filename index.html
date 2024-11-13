@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flowchart</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f9f9f9;
+            margin: 0;
+        }
+        
+        .flowchart {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .box, .diamond {
+            padding: 10px 20px;
+            background-color: #cde;
+            border: 1px solid #333;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 14px;
+            margin: 10px 0;
+        }
+
+        .diamond {
+            width: 150px;
+            height: 50px;
+            transform: rotate(45deg);
+            position: relative;
+        }
+
+        .diamond span {
+            display: block;
+            transform: rotate(-45deg);
+            position: absolute;
+            top: 25%;
+            left: 25%;
+            width: 100%;
+        }
+
+        .line-vertical {
+            width: 2px;
+            height: 20px;
+            background-color: #333;
+        }
+
+        .line-horizontal {
+            height: 2px;
+            width: 100px;
+            background-color: #333;
+        }
+
+        .flex {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+        }
+
+        .column {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="flowchart">
+        <div class="box">Sign In / Sign Up</div>
+        <div class="line-vertical"></div>
+        <div class="diamond"><span>Check if User is Registered</span></div>
+        <div class="flex">
+            <div class="column">
+                <div class="line-horizontal"></div>
+                <div class="box">User Registration</div>
+            </div>
+            <div class="column">
+                <div class="line-vertical"></div>
+                <div class="diamond"><span>Banking Facilities</span></div>
+                <div class="flex">
+                    <div class="column">
+                        <div class="line-vertical"></div>
+                        <div class="box">Account Management</div>
+                        <div class="flex">
+                            <div class="column">
+                                <div class="line-vertical"></div>
+                                <div class="box">Account Details Update</div>
+                            </div>
+                            <div class="column">
+                                <div class="line-vertical"></div>
+                                <div class="box">Transaction History</div>
+                            </div>
+                            <div class="column">
+                                <div class="line-vertical"></div>
+                                <div class="box">Balance Enquiry</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="line-vertical"></div>
+                        <div class="box">Money</div>
+                        <div class="flex">
+                            <div class="column">
+                                <div class="line-vertical"></div>
+                                <div class="box">Credit / Withdraw</div>
+                            </div>
+                            <div class="column">
+                                <div class="line-vertical"></div>
+                                <div class="box">Send Money</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
